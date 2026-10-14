@@ -1,0 +1,8 @@
+interview_prep/
+data/raw/
+*.twb
+*.pdf
+*.zip
+__pycache__/
+*.pyc
+scripts/03_build_twbx.py
