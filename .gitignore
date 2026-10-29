@@ -1,6 +1,5 @@
 interview_prep/
 data/raw/
-*.twb
 *.pdf
 *.zip
 __pycache__/

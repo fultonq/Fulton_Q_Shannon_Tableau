@@ -1,0 +1,1909 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="18.1" source-build="2024.1.3 (20241.24.0515.0324)" source-platform="win" version="18.1">
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="FY26 Permits" inline="true" name="federated.fy26permits0001" version="18.1">
+      <connection class="federated">
+        <named-connections>
+          <named-connection caption="permits_by_tracking_number" name="textscan.fy26permits0001">
+            <connection class="textscan" directory="Data/data" filename="permits_by_tracking_number.csv" password="" server="" />
+          </named-connection>
+        </named-connections>
+        <relation connection="textscan.fy26permits0001" name="permits_by_tracking_number.csv" table="[permits_by_tracking_number#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="string" name="TrackingNumber" ordinal="0" />
+            <column datatype="string" name="PermitNumber" ordinal="1" />
+            <column datatype="string" name="Status" ordinal="2" />
+            <column datatype="string" name="NewOrRenewal" ordinal="3" />
+            <column datatype="date" name="ApplicationDate" ordinal="4" />
+            <column datatype="date" name="ApprovalDate" ordinal="5" />
+            <column datatype="date" name="IssueDate" ordinal="6" />
+            <column datatype="integer" name="IssuedInFY26" ordinal="7" />
+            <column datatype="integer" name="BusinessDaysToApprove_QA" ordinal="8" />
+            <column datatype="integer" name="BusinessDaysToIssue_QA" ordinal="9" />
+            <column datatype="integer" name="CalendarDaysToApprove" ordinal="10" />
+            <column datatype="string" name="WorkTypeFamily" ordinal="11" />
+            <column datatype="string" name="PermitCategory" ordinal="12" />
+            <column datatype="string" name="TypeDetailNames" ordinal="13" />
+            <column datatype="integer" name="NumWorkTypes" ordinal="14" />
+            <column datatype="string" name="ApplicantType" ordinal="15" />
+            <column datatype="string" name="PermitteeName" ordinal="16" />
+            <column datatype="string" name="ResubmissionRequested" ordinal="17" />
+            <column datatype="string" name="PSCReview" ordinal="18" />
+            <column datatype="integer" name="NumBlockLocations" ordinal="19" />
+            <column datatype="string" name="LocationBucket" ordinal="20" />
+            <column datatype="string" name="Ward" ordinal="21" />
+            <column datatype="string" name="Quadrant" ordinal="22" />
+            <column datatype="real" name="TotalFee" ordinal="23" />
+            <column datatype="real" name="Latitude" ordinal="24" />
+            <column datatype="real" name="Longitude" ordinal="25" />
+            <column datatype="string" name="WorkLocation" ordinal="26" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="capability">
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype="string" name="character-set">"UTF-8"</attribute>
+              <attribute datatype="string" name="collation">"en_US"</attribute>
+              <attribute datatype="string" name="field-delimiter">","</attribute>
+              <attribute datatype="string" name="header-row">"true"</attribute>
+              <attribute datatype="string" name="locale">"en_US"</attribute>
+              <attribute datatype="string" name="single-char">""</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>TrackingNumber</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TrackingNumber]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>TrackingNumber</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>PermitNumber</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PermitNumber]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>PermitNumber</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>NewOrRenewal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NewOrRenewal]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>NewOrRenewal</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ApplicationDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[ApplicationDate]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>ApplicationDate</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ApprovalDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[ApprovalDate]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>ApprovalDate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>IssueDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[IssueDate]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>IssueDate</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>IssuedInFY26</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IssuedInFY26]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>IssuedInFY26</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>BusinessDaysToApprove_QA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BusinessDaysToApprove_QA]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>BusinessDaysToApprove_QA</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>BusinessDaysToIssue_QA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BusinessDaysToIssue_QA]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>BusinessDaysToIssue_QA</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>CalendarDaysToApprove</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CalendarDaysToApprove]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>CalendarDaysToApprove</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>WorkTypeFamily</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WorkTypeFamily]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>WorkTypeFamily</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>PermitCategory</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PermitCategory]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>PermitCategory</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>TypeDetailNames</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TypeDetailNames]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>TypeDetailNames</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>NumWorkTypes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumWorkTypes]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>NumWorkTypes</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ApplicantType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ApplicantType]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>ApplicantType</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>PermitteeName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PermitteeName]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>PermitteeName</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>ResubmissionRequested</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ResubmissionRequested]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>ResubmissionRequested</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>PSCReview</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PSCReview]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>PSCReview</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>NumBlockLocations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumBlockLocations]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>NumBlockLocations</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>LocationBucket</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LocationBucket]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>LocationBucket</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Ward</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ward]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>Ward</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Quadrant</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Quadrant]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>Quadrant</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>TotalFee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalFee]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>TotalFee</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>WorkLocation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WorkLocation]</local-name>
+            <parent-name>[permits_by_tracking_number.csv]</parent-name>
+            <remote-alias>WorkLocation</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag="0" name="LEN_RUS" />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column datatype="string" name="[:Measure Names]" role="dimension" type="nominal">
+        <aliases>
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&quot;" value="Average business days to approve" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_MedApprove:qk]&quot;" value="Median business days to approve" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_Pct10:qk]&quot;" value="% approved within 10 business days" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]&quot;" value="Avg business days to issue (incl. applicant payment)" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_Permits:qk]&quot;" value="Permits measured" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_PermitsScope:qk]&quot;" value="Permits in scope" />
+          <alias key="&quot;[federated.fy26permits0001].[usr:Calc_SumQA:qk]&quot;" value="QA mismatches vs. Python check (should be 0)" />
+        </aliases>
+      </column>
+      <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+      <column datatype="string" name="[Ward]" role="dimension" type="nominal" />
+      <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+      </column>
+      <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+      </column>
+      <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+      </column>
+      <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+      </column>
+      <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+      </column>
+      <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+      </column>
+      <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+      </column>
+      <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+      </column>
+      <column caption="QA Mismatch" datatype="integer" name="[Calc_QA]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="ABS([Calc_BDApprove] - [BusinessDaysToApprove_QA])" />
+      </column>
+      <column caption="Approval Time Band" datatype="string" name="[Calc_Band]" role="dimension" type="nominal">
+        <calculation class="tableau" formula="IF ISNULL([Calc_BDApprove]) THEN NULL&#10;ELSEIF [Calc_BDApprove] = 0 THEN &quot;Same day&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 5 THEN &quot;1-5 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 10 THEN &quot;6-10 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 20 THEN &quot;11-20 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 40 THEN &quot;21-40 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 60 THEN &quot;41-60 days&quot;&#10;ELSE &quot;61+ days&quot; END" />
+      </column>
+      <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+        <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+      </column>
+      <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+        <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+      </column>
+      <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+        <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+      </column>
+      <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+        <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+      </column>
+      <column caption="Permits In Scope" datatype="integer" name="[Calc_PermitsScope]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+        <calculation class="tableau" formula="COUNTD(IF [Calc_InScope] THEN [TrackingNumber] END)" />
+      </column>
+      <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+        <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+      </column>
+      <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+        <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+      </column>
+      <column caption="% Approved Within 10 Business Days" datatype="real" name="[Calc_Pct10]" role="measure" type="quantitative" default-format="p0%">
+        <calculation class="tableau" formula="SUM(IIF([Calc_BDApprove] &lt;= 10, 1, 0)) / COUNT([Calc_BDApprove])" />
+      </column>
+      <column caption="QA Mismatch Total" datatype="integer" name="[Calc_SumQA]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="SUM([Calc_QA])" />
+      </column>
+      <column caption="Speed vs Overall" datatype="string" name="[Calc_Speed]" role="measure" type="nominal">
+        <calculation class="tableau" formula="IF [Calc_Diff] &lt;= -5 THEN &quot;Faster than overall&quot;&#10;ELSEIF [Calc_Diff] &gt;= 5 THEN &quot;Slower than overall&quot;&#10;ELSE &quot;Near overall&quot; END" />
+      </column>
+      <layout dim-ordering="alphabetic" dim-percentage="0.5" measure-ordering="alphabetic" measure-percentage="0.4" show-structure="true" />
+      <semantic-values>
+        <semantic-value key="[Country].[Name]" value="&quot;United States&quot;" />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption="Filter by Permit Category" name="[Action1_FY26CATEGORYFILTER]">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="FY26 Permit Approval Times" type="sheet" worksheet="By Permit Category" />
+      <command command="tsc:tsl-filter">
+        <param name="exclude" value="By Permit Category" />
+        <param name="special-fields" value="all" />
+        <param name="target" value="FY26 Permit Approval Times" />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name="KPI - Overall">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Overall FY26 performance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[BusinessDaysToApprove_QA]" role="measure" type="quantitative" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="% Approved Within 10 Business Days" datatype="real" name="[Calc_Pct10]" role="measure" type="quantitative" default-format="p0%">
+              <calculation class="tableau" formula="SUM(IIF([Calc_BDApprove] &lt;= 10, 1, 0)) / COUNT([Calc_BDApprove])" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Permits In Scope" datatype="integer" name="[Calc_PermitsScope]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF [Calc_InScope] THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="QA Mismatch" datatype="integer" name="[Calc_QA]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="ABS([Calc_BDApprove] - [BusinessDaysToApprove_QA])" />
+            </column>
+            <column caption="QA Mismatch Total" datatype="integer" name="[Calc_SumQA]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="SUM([Calc_QA])" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Pct10]" derivation="User" name="[usr:Calc_Pct10:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_PermitsScope]" derivation="User" name="[usr:Calc_PermitsScope:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_SumQA]" derivation="User" name="[usr:Calc_SumQA:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <filter class="categorical" column="[federated.fy26permits0001].[:Measure Names]">
+            <groupfilter function="union" user:op="manual">
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_MedApprove:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_Pct10:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_Permits:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_PermitsScope:qk]&quot;" />
+              <groupfilter function="member" level="[:Measure Names]" member="&quot;[federated.fy26permits0001].[usr:Calc_SumQA:qk]&quot;" />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+            <column>[federated.fy26permits0001].[:Measure Names]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[Multiple Values]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[:Measure Names]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name="Distribution">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">How long approvals take: permits by approval-time band</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Approval Time Band" datatype="string" name="[Calc_Band]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="IF ISNULL([Calc_BDApprove]) THEN NULL&#10;ELSEIF [Calc_BDApprove] = 0 THEN &quot;Same day&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 5 THEN &quot;1-5 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 10 THEN &quot;6-10 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 20 THEN &quot;11-20 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 40 THEN &quot;21-40 days&quot;&#10;ELSEIF [Calc_BDApprove] &lt;= 60 THEN &quot;41-60 days&quot;&#10;ELSE &quot;61+ days&quot; END" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Band]" derivation="None" name="[none:Calc_Band:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_BDApprove]" derivation="Min" name="[min:Calc_BDApprove:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:Calc_Band:nk]" direction="ASC" using="[federated.fy26permits0001].[min:Calc_BDApprove:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[usr:Calc_Permits:qk]</rows>
+        <cols>[federated.fy26permits0001].[none:Calc_Band:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="By Permit Category">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Average business days to approve, by permit category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[PermitCategory]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column datatype="string" name="[WorkTypeFamily]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[PermitCategory]" derivation="None" name="[none:PermitCategory:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Diff]" derivation="User" name="[usr:Calc_Diff:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[WorkTypeFamily]" derivation="None" name="[none:WorkTypeFamily:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_Overall]" derivation="Avg" name="[avg:Calc_Overall:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:PermitCategory:nk]" direction="DESC" using="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_MedApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Diff:qk]" />
+              <color column="[federated.fy26permits0001].[none:WorkTypeFamily:nk]" />
+              <lod column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" />
+            </encodings>
+            <reference-line axis-column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" enable-instant-analytics="true" formula="average" id="refline0" label="Overall avg: &lt;Value&gt;" label-type="custom" scope="per-table" value-column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" z-order="1" />
+            <customized-label>
+              <formatted-text>
+                <run bold="true">&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+                <run>  (n=</run>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_Permits:qk]&gt;</run>
+                <run>)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:PermitCategory:nk]</rows>
+        <cols>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="By Applicant Type">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Average business days to approve, by applicant type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="string" name="[ApplicantType]" role="dimension" type="nominal" />
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Speed vs Overall" datatype="string" name="[Calc_Speed]" role="measure" type="nominal">
+              <calculation class="tableau" formula="IF [Calc_Diff] &lt;= -5 THEN &quot;Faster than overall&quot;&#10;ELSEIF [Calc_Diff] &gt;= 5 THEN &quot;Slower than overall&quot;&#10;ELSE &quot;Near overall&quot; END" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[ApplicantType]" derivation="None" name="[none:ApplicantType:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Diff]" derivation="User" name="[usr:Calc_Diff:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Speed]" derivation="User" name="[usr:Calc_Speed:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_Overall]" derivation="Avg" name="[avg:Calc_Overall:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:ApplicantType:nk]" direction="DESC" using="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_MedApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Diff:qk]" />
+              <color column="[federated.fy26permits0001].[usr:Calc_Speed:nk]" />
+              <lod column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" />
+            </encodings>
+            <reference-line axis-column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" enable-instant-analytics="true" formula="average" id="refline0" label="Overall avg: &lt;Value&gt;" label-type="custom" scope="per-table" value-column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" z-order="1" />
+            <customized-label>
+              <formatted-text>
+                <run bold="true">&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+                <run>  (n=</run>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_Permits:qk]&gt;</run>
+                <run>)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:ApplicantType:nk]</rows>
+        <cols>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Resubmission Impact">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Resubmission requested vs. not</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[ResubmissionRequested]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[ResubmissionRequested]" derivation="None" name="[none:ResubmissionRequested:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Diff]" derivation="User" name="[usr:Calc_Diff:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Overall]" derivation="Avg" name="[avg:Calc_Overall:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:ResubmissionRequested:nk]" direction="ASC" using="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_MedApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Diff:qk]" />
+              <color column="[federated.fy26permits0001].[none:ResubmissionRequested:nk]" />
+              <lod column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" />
+            </encodings>
+            <reference-line axis-column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" enable-instant-analytics="true" formula="average" id="refline0" label="Overall avg: &lt;Value&gt;" label-type="custom" scope="per-table" value-column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" z-order="1" />
+            <customized-label>
+              <formatted-text>
+                <run bold="true">&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+                <run>  (n=</run>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_Permits:qk]&gt;</run>
+                <run>)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:ResubmissionRequested:nk]</rows>
+        <cols>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Work Location Size">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">By number of blocks on the permit</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[LocationBucket]" role="dimension" type="nominal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="integer" name="[NumBlockLocations]" role="measure" type="quantitative" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[LocationBucket]" derivation="None" name="[none:LocationBucket:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Diff]" derivation="User" name="[usr:Calc_Diff:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Overall]" derivation="Avg" name="[avg:Calc_Overall:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+            <column-instance column="[NumBlockLocations]" derivation="Min" name="[min:NumBlockLocations:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:LocationBucket:nk]" direction="ASC" using="[federated.fy26permits0001].[min:NumBlockLocations:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_MedApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Diff:qk]" />
+              <lod column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" />
+            </encodings>
+            <reference-line axis-column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" enable-instant-analytics="true" formula="average" id="refline0" label="Overall avg: &lt;Value&gt;" label-type="custom" scope="per-table" value-column="[federated.fy26permits0001].[avg:Calc_Overall:qk]" z-order="1" />
+            <customized-label>
+              <formatted-text>
+                <run bold="true">&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+                <run>  (n=</run>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_Permits:qk]&gt;</run>
+                <run>)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:LocationBucket:nk]</rows>
+        <cols>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Applicant x Resubmission">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Avg business days: applicant type x resubmission (gap holds in every row)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="string" name="[ApplicantType]" role="dimension" type="nominal" />
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[ResubmissionRequested]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[ApplicantType]" derivation="None" name="[none:ApplicantType:nk]" pivot="key" type="nominal" />
+            <column-instance column="[ResubmissionRequested]" derivation="None" name="[none:ResubmissionRequested:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Square" />
+            <encodings>
+              <color column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold="true" fontsize="11">&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+                <run>Æ
+</run>
+                <run fontsize="8">n=</run>
+                <run fontsize="8">&lt;[federated.fy26permits0001].[usr:Calc_Permits:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:ApplicantType:nk]</rows>
+        <cols>[federated.fy26permits0001].[none:ResubmissionRequested:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Approval vs Issuance">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Business days to approve (DDOT) vs. to issue (incl. applicant payment)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[PermitCategory]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[PermitCategory]" derivation="None" name="[none:PermitCategory:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <sort class="computed" column="[federated.fy26permits0001].[none:PermitCategory:nk]" direction="DESC" using="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[none:PermitCategory:nk]</rows>
+        <cols>([federated.fy26permits0001].[usr:Calc_AvgApprove:qk] + [federated.fy26permits0001].[usr:Calc_AvgIssue:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name="By Ward">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">Average business days to approve, by ward (little variation)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column datatype="string" name="[Ward]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Avg Business Days to Issue" datatype="real" name="[Calc_AvgIssue]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDIssue])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Business Days to Issue" datatype="integer" name="[Calc_BDIssue]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] AND NOT ISNULL([ApprovalDate]) THEN&#10;[Calc_WkIss] - [Calc_WkApp] - [Calc_HolIss]&#10;END" />
+            </column>
+            <column caption="Diff vs Overall" datatype="real" name="[Calc_Diff]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="[Calc_AvgApprove] - AVG([Calc_Overall])" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="Holidays - Application to Issue" datatype="integer" name="[Calc_HolIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [IssueDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [IssueDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Median Business Days to Approve" datatype="real" name="[Calc_MedApprove]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="MEDIAN([Calc_BDApprove])" />
+            </column>
+            <column caption="Overall Avg (FIXED)" datatype="real" name="[Calc_Overall]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="{ FIXED : AVG([Calc_BDApprove]) }" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Issue" datatype="integer" name="[Calc_WkIss]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [IssueDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [IssueDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Ward]" derivation="None" name="[none:Ward:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_MedApprove]" derivation="User" name="[usr:Calc_MedApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_AvgIssue]" derivation="User" name="[usr:Calc_AvgIssue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Diff]" derivation="User" name="[usr:Calc_Diff:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <text column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_MedApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_AvgIssue:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Diff:qk]" />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</rows>
+        <cols>[federated.fy26permits0001].[none:Ward:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Monthly Trend (censored)">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold="true" fontsize="12">By application month</run>
+            <run>Æ
+</run>
+            <run fontsize="9" fontcolor="#c00000">CAUTION: late-FY months only include permits issued by 9/30/2026, so they are biased toward fast approvals.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="FY26 Permits" name="federated.fy26permits0001" />
+          </datasources>
+          <datasource-dependencies datasource="federated.fy26permits0001">
+            <column datatype="date" name="[ApplicationDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[ApprovalDate]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[IssueDate]" role="dimension" type="ordinal" />
+            <column datatype="string" name="[NewOrRenewal]" role="dimension" type="nominal" />
+            <column datatype="string" name="[TrackingNumber]" role="dimension" type="nominal" />
+            <column caption="Avg Business Days to Approve" datatype="real" name="[Calc_AvgApprove]" role="measure" type="quantitative" default-format="n#,##0.0;-#,##0.0">
+              <calculation class="tableau" formula="AVG([Calc_BDApprove])" />
+            </column>
+            <column caption="Business Days to Approve" datatype="integer" name="[Calc_BDApprove]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF [Calc_InScope] THEN&#10;[Calc_WkApr] - [Calc_WkApp] - [Calc_HolApr]&#10;END" />
+            </column>
+            <column caption="Holidays - Application to Approval" datatype="integer" name="[Calc_HolApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IIF(#2025-10-13# &gt; [ApplicationDate] AND #2025-10-13# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-11# &gt; [ApplicationDate] AND #2025-11-11# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-11-27# &gt; [ApplicationDate] AND #2025-11-27# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2025-12-25# &gt; [ApplicationDate] AND #2025-12-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-01# &gt; [ApplicationDate] AND #2026-01-01# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-01-19# &gt; [ApplicationDate] AND #2026-01-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-02-16# &gt; [ApplicationDate] AND #2026-02-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-04-16# &gt; [ApplicationDate] AND #2026-04-16# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-05-25# &gt; [ApplicationDate] AND #2026-05-25# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-06-19# &gt; [ApplicationDate] AND #2026-06-19# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-07-03# &gt; [ApplicationDate] AND #2026-07-03# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-09-07# &gt; [ApplicationDate] AND #2026-09-07# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-10-12# &gt; [ApplicationDate] AND #2026-10-12# &lt;= [ApprovalDate], 1, 0) +&#10;IIF(#2026-11-11# &gt; [ApplicationDate] AND #2026-11-11# &lt;= [ApprovalDate], 1, 0)" />
+            </column>
+            <column caption="In Scope (FY26 New Issued)" datatype="boolean" name="[Calc_InScope]" role="dimension" type="nominal">
+              <calculation class="tableau" formula="[NewOrRenewal] = &quot;New&quot;&#10;AND [ApplicationDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &gt;= #2025-10-01#&#10;AND [IssueDate] &lt;= #2026-09-30#" />
+            </column>
+            <column caption="Permits (measured)" datatype="integer" name="[Calc_Permits]" role="measure" type="quantitative" default-format="n#,##0;-#,##0">
+              <calculation class="tableau" formula="COUNTD(IF NOT ISNULL([Calc_BDApprove]) THEN [TrackingNumber] END)" />
+            </column>
+            <column caption="Weekday Index - Application" datatype="integer" name="[Calc_WkApp]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApplicationDate]) % 7, 5)" />
+            </column>
+            <column caption="Weekday Index - Approval" datatype="integer" name="[Calc_WkApr]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="5 * INT(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) / 7) + MIN(DATEDIFF('day', #2023-01-01#, [ApprovalDate]) % 7, 5)" />
+            </column>
+            <column-instance column="[Calc_AvgApprove]" derivation="User" name="[usr:Calc_AvgApprove:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[ApplicationDate]" derivation="Month-Trunc" name="[tmn:ApplicationDate:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_Permits]" derivation="User" name="[usr:Calc_Permits:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calc_InScope]" derivation="None" name="[none:Calc_InScope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[federated.fy26permits0001].[none:Calc_InScope:nk]">
+            <groupfilter function="member" level="[none:Calc_InScope:nk]" member="true" user:ui-domain="database" user:ui-enumeration="inclusive" user:ui-marker="enumerate" />
+          </filter>
+          <slices>
+            <column>[federated.fy26permits0001].[none:Calc_InScope:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Line" />
+            <encodings>
+              <text column="[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]" />
+              <tooltip column="[federated.fy26permits0001].[usr:Calc_Permits:qk]" />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-labels-show" value="true" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.fy26permits0001].[usr:Calc_AvgApprove:qk]</rows>
+        <cols>[federated.fy26permits0001].[tmn:ApplicationDate:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="FY26 Permit Approval Times">
+      <style />
+      <size maxheight="1000" maxwidth="1400" minheight="1000" minwidth="1400" sizing-mode="fixed" />
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="100000" id="2" param="vert" type-v2="layout-flow" w="100000" x="0" y="0">
+            <zone h="5000" id="3" type-v2="text" w="100000" x="0" y="0">
+              <formatted-text>
+                <run bold="true" fontsize="20" fontcolor="#1f3864">FY2026 Public Space Construction Permits: Business Days to Approve</run>
+              </formatted-text>
+            </zone>
+            <zone h="5000" id="4" type-v2="text" w="100000" x="0" y="5000">
+              <formatted-text>
+                <run fontsize="10" fontcolor="#404040">New permits applied for on or after Oct 1, 2025 and issued in FY26 (Oct 1, 2025 - Sep 30, 2026). Business days count from application to DDOT's final approval and exclude weekends and DC holidays. Source: DDOT TOPS, deduplicated to one row per permit. Click a permit category to filter the whole dashboard; click again to clear.</run>
+              </formatted-text>
+            </zone>
+            <zone h="40000" id="5" param="horz" type-v2="layout-flow" w="100000" x="0" y="10000">
+              <zone h="40000" id="6" param="vert" type-v2="layout-flow" w="32000" x="0" y="10000">
+                <zone h="4000" id="7" type-v2="text" w="32000" x="0" y="10000">
+                  <formatted-text>
+                    <run bold="true" fontsize="12" fontcolor="#1f3864">1 | Overall performance</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#dce6f2" />
+                  </zone-style>
+                </zone>
+                <zone h="21000" id="8" name="KPI - Overall" show-title="false" w="32000" x="0" y="14000" />
+                <zone h="15000" id="9" name="Distribution" w="32000" x="0" y="35000" />
+              </zone>
+              <zone h="40000" id="10" param="vert" type-v2="layout-flow" w="68000" x="32000" y="10000">
+                <zone h="4000" id="11" type-v2="text" w="68000" x="32000" y="10000">
+                  <formatted-text>
+                    <run bold="true" fontsize="12" fontcolor="#1f3864">2 | By permit type category</run>
+                    <run fontsize="9" fontcolor="#595959">   Click a bar to filter the dashboard; line = overall average; Excavation is split by utility because it is 90% of permits</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#dce6f2" />
+                  </zone-style>
+                </zone>
+                <zone h="36000" id="12" name="By Permit Category" w="68000" x="32000" y="14000" />
+              </zone>
+            </zone>
+            <zone h="4000" id="13" type-v2="text" w="100000" x="0" y="50000">
+              <formatted-text>
+                <run bold="true" fontsize="12" fontcolor="#1f3864">3 | Where approval times differ</run>
+                <run fontsize="9" fontcolor="#595959">   Resubmission and project size separate fast from slow; geography does not (see Deeper Dive tab)</run>
+              </formatted-text>
+              <zone-style>
+                <format attr="background-color" value="#dce6f2" />
+              </zone-style>
+            </zone>
+            <zone h="31000" id="14" param="horz" type-v2="layout-flow" w="100000" x="0" y="54000">
+              <zone h="31000" id="15" name="By Applicant Type" w="34000" x="0" y="54000" />
+              <zone h="31000" id="16" name="Resubmission Impact" w="33000" x="34000" y="54000" />
+              <zone h="31000" id="17" name="Work Location Size" w="33000" x="67000" y="54000" />
+            </zone>
+            <zone h="15000" id="18" param="horz" type-v2="layout-flow" w="100000" x="0" y="85000">
+              <zone h="15000" id="19" type-v2="text" w="62000" x="0" y="85000">
+                <formatted-text>
+                  <run bold="true" fontsize="12" fontcolor="#1f3864">Key takeaways</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">- 22.2 avg / 13 median business days. The average blends a same-day group (22%) with a 60+ day tail (9%).</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">- Widest gap is resubmission: 12.4 vs 48.3 days. 27% of permits account for 59% of approval days.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">- Project size: 1 block 13.5 days vs 6-20 blocks 51.7. DC Water single-block permits take 7 days, multi-block 41-52.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">- Category: Sewer/Storm 0.9 and Gas 8.0, up to Water 35.7 and Multiple Work Types 51.0. Water is 32% of permits and 51% of approval days.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">- Applicant: Washington Gas 8.9, DC Water 31.2, Private 44.1. Private applicants are asked to resubmit 68% of the time.</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr="background-color" value="#f2f2f2" />
+                </zone-style>
+              </zone>
+              <zone h="15000" id="20" type-v2="text" w="38000" x="62000" y="85000">
+                <formatted-text>
+                  <run bold="true" fontsize="12" fontcolor="#1f3864">Next steps</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">1. Analyze reasons for Revise &amp; Resubmit requests by category.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">2. Review DC Water multi-block lateral work as a program.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">3. Split time into queue, review, and applicant-payment stages.</run>
+                  <run>Æ
+</run>
+                  <run fontsize="10" fontcolor="#404040">4. Use cohort-based trends (the monthly view is cut off at year end).</run>
+                  <run>Æ
+</run>
+                  <run fontsize="9" fontcolor="#595959">Holidays excluded: 10/13, 11/11, 11/27, 12/25, 1/1, 1/19, 2/16, 4/16, 5/25, 6/19, 7/3, 9/7</run>
+                  <run>Æ
+</run>
+                  <run fontsize="9" fontcolor="#595959">5 of 2,992 in-scope permits have no approval date and are left out of the business-day averages (n = 2,987).</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr="background-color" value="#f2f2f2" />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="Deeper Dive">
+      <style />
+      <size maxheight="1000" maxwidth="1400" minheight="1000" minwidth="1400" sizing-mode="fixed" />
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="100000" id="2" param="vert" type-v2="layout-flow" w="100000" x="0" y="0">
+            <zone h="8000" id="3" type-v2="text" w="100000" x="0" y="0">
+              <formatted-text>
+                <run bold="true" fontsize="20" fontcolor="#1f3864">Deeper dive: what separates fast and slow approvals</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?</run>
+              </formatted-text>
+            </zone>
+            <zone h="46000" id="4" param="horz" type-v2="layout-flow" w="100000" x="0" y="8000">
+              <zone h="46000" id="5" name="Applicant x Resubmission" w="50000" x="0" y="8000" />
+              <zone h="46000" id="6" name="Approval vs Issuance" w="50000" x="50000" y="8000" />
+            </zone>
+            <zone h="46000" id="7" param="horz" type-v2="layout-flow" w="100000" x="0" y="54000">
+              <zone h="46000" id="8" name="By Ward" w="50000" x="0" y="54000" />
+              <zone h="46000" id="9" name="Monthly Trend (censored)" w="50000" x="50000" y="54000" />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height="30">
+    <window class="worksheet" name="KPI - Overall">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Distribution">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="By Permit Category">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="By Applicant Type">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Resubmission Impact">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Work Location Size">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Applicant x Resubmission">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Approval vs Issuance">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="By Ward">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="worksheet" name="Monthly Trend (censored)">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="2147483647">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class="dashboard" maximized="true" name="FY26 Permit Approval Times">
+      <viewpoints>
+        <viewpoint name="KPI - Overall" />
+        <viewpoint name="Distribution" />
+        <viewpoint name="By Permit Category" />
+        <viewpoint name="By Applicant Type" />
+        <viewpoint name="Resubmission Impact" />
+        <viewpoint name="Work Location Size" />
+      </viewpoints>
+      <active id="-1" />
+    </window>
+    <window class="dashboard" maximized="false" name="Deeper Dive">
+      <viewpoints>
+        <viewpoint name="Applicant x Resubmission" />
+        <viewpoint name="Approval vs Issuance" />
+        <viewpoint name="By Ward" />
+        <viewpoint name="Monthly Trend (censored)" />
+      </viewpoints>
+      <active id="-1" />
+    </window>
+  </windows>
+</workbook>
