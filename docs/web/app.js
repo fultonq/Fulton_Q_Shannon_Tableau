@@ -399,6 +399,14 @@
   <h1>Data segmentation: what separates fast and slow approvals</h1>
   <p class="lede">Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?</p>
   <div class="grid g2">${card('axr')}${card('avi')}${card('ward')}${card('trend')}</div>
+  ${box('Key takeaways', [
+    '<b>Resubmission gap holds for every applicant type:</b> Washington Gas 5.5 vs 33.6 days, DC Water 19.6 vs 54.9, Private 20.3 vs 55.2. It is not an applicant-mix effect.',
+    '<b>Issuance follows quickly:</b> most permits issue 3-5 business days after approval. Excavation - Gas is the exception: 8.0 days to approve but 55.3 to issue, and it holds 87% of all post-approval days.',
+    '<b>The gas wait is skewed:</b> median 6 days, but 36% wait 20+, so it points to a payment or pickup step on a subset of permits, not to DDOT review.',
+    '<b>Geography explains little:</b> Wards 1-8 average 18.2 to 27.2 days with medians of 9 to 17. Only the 18 multi-ward permits stand out (36.8).',
+    '<b>The monthly drop is not an improvement:</b> Oct-May applications average 37.6 days vs 12.4 for Jun-Sep, because slow late-year permits were not yet issued by 9/30.',
+    '<b>Where to act:</b> Revise &amp; Resubmit requests and the gas approval-to-issuance gap, not ward-level or seasonal factors.',
+  ], false, STATIC_NOTE)}
 </div>` },
 
     sheets: { label: 'Worksheets', html: () => `
