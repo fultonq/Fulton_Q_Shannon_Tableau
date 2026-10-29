@@ -14,6 +14,7 @@ ET = ZoneInfo("America/New_York")
 FY_START, FY_END = dt.date(2025, 10, 1), dt.date(2026, 9, 30)
 
 # DC government holidays (observed dates), Oct 2025 - Nov 2026
+# A Python set of observed DC government holidays for the relevant period
 DC_HOLIDAYS = {
     dt.date(2025, 10, 13): "Indigenous Peoples' Day / Columbus Day",
     dt.date(2025, 11, 11): "Veterans Day",
@@ -31,8 +32,9 @@ DC_HOLIDAYS = {
     dt.date(2026, 11, 11): "Veterans Day",
 }
 
-
+# Utility functions for date and business-day calculations
 def local_dt(ms):
+    """Convert an ArcGIS epoch-milliseconds timestamp to an aware datetime in US Eastern time (None passes through)."""
     return None if ms is None else dt.datetime.fromtimestamp(ms / 1000, dt.timezone.utc).astimezone(ET)
 
 
@@ -47,7 +49,7 @@ def business_days(start, end):
             n += 1
     return n
 
-
+# Utility functions and constants for permit classification
 FAMILY_SPLIT = re.compile(r", (?=[A-Z][A-Za-z ]+; )")
 EXCAVATION_GROUPS = [  # first match wins
     ("Excavation - Test Pit / Boring", ("boring", "test pit")),
@@ -58,8 +60,14 @@ EXCAVATION_GROUPS = [  # first match wins
     ("Excavation - Telecom", ("telecom", "handhole", "fiber", "communication")),
 ]
 
-
+# Classify permits into work type families and categories
 def permit_category(type_detail_names):
+    """Classify a permit from its TypeDetailNames string.
+
+    Returns (WorkTypeFamily, PermitCategory). Permits spanning several families are
+    "Multiple Work Types"; Excavation permits are further split by utility using EXCAVATION_GROUPS.
+    """
+    # strip() and split() functions: clean up and separate the TypeDetailNames string into individual details
     details = [t.strip() for t in FAMILY_SPLIT.split(type_detail_names or "") if t.strip()]
     families = {t.split(";")[0].strip() for t in details}
     if not families:
@@ -69,17 +77,20 @@ def permit_category(type_detail_names):
     fam = families.pop()
     if fam != "Excavation":
         return fam, fam
-    groups = set()
+    groups = set() # Collect the excavation groups found in the details
+
+    # Iterate over each detail to determine which excavation group it belongs to
     for t in details:
         low = t.lower()
         groups.add(next((g for g, keys in EXCAVATION_GROUPS if any(k in low for k in keys)), "Excavation - Other"))
     # A test pit bundled with a utility repair is classified by the utility
     if len(groups) > 1:
-        groups.discard("Excavation - Test Pit / Boring")
+        groups.discard("Excavation - Test Pit / Boring") # Remove test pits if other utility groups are present
     return "Excavation", (groups.pop() if len(groups) == 1 else "Excavation - Multiple Utilities")
 
-
+# Classify the type of applicant based on the permittee and applicant company strings
 def applicant_type(permittee, applicant_co):
+    """Group a permit's permittee / applicant company into a utility, government, or private applicant type."""
     s = f"{permittee or ''} | {applicant_co or ''}".lower()
     if "wash gas" in s or "washington gas" in s:
         return "Utility - Washington Gas"
@@ -87,24 +98,33 @@ def applicant_type(permittee, applicant_co):
         return "Utility - DC Water"
     if "pepco" in s or "potomac electric" in s:
         return "Utility - Pepco"
+    # If none of the above utilities match, check for other known utilities
+    # NB: any() can consume a generator expression directly, so we don't need a list comprehension here
     if any(k in s for k in ("verizon", "comcast", "crown castle", "zayo", "cellco", "teleport", "rcn", "at&t", "starpower", "lightower", "fiber")):
         return "Utility - Telecom"
+    # Check for government agencies next
     if any(k in s for k in ("department of", "ddot", "dc department", "district of columbia", "dc public", "wmata", "dc government", "u.s. ", "national park", "architect of the capitol")):
         return "Government Agency"
     return "Private / Other"
 
-
+# Bucket the number of block locations into project-size bands
 def bucket_locations(n):
+    """Bucket the number of block locations on a permit into a project-size band."""
     return "1 block" if n == 1 else "2-5 blocks" if n <= 5 else "6-20 blocks" if n <= 20 else "21+ blocks"
 
-
+# Main processing function to collapse raw block-level rows to permit-level rows and write outputs
 def main(raw_path, out_dir):
+    """Collapse the raw block-level rows to one row per TrackingNumber and write the CSV outputs to out_dir."""
     rows = json.load(open(raw_path))
     by_tn = C.defaultdict(list)
+
+    # Group the raw rows by TrackingNumber for permit-level aggregation
     for r in rows:
         by_tn[r["TrackingNumber"]].append(r)
 
     out = []
+
+    # Iterate over each permit grouped by TrackingNumber
     for tn, recs in by_tn.items():
         recs.sort(key=lambda r: r["OBJECTID"])
         r = recs[0]  # permit-level attributes are repeated on every block row
@@ -141,6 +161,7 @@ def main(raw_path, out_dir):
             "WorkLocation": r["WorkLocationFullAddress"],
         })
 
+    # Write the aggregated permit-level data to CSV
     with open(f"{out_dir}/permits_by_tracking_number.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0]))
         w.writeheader()

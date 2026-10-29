@@ -6,3 +6,4 @@ data/raw/
 __pycache__/
 *.pyc
 scripts/03_build_twbx.py
+backups/
