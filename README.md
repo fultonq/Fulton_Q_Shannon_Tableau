@@ -38,6 +38,8 @@ tableau-workbook/
 | Business days exclude weekends and DC holidays | `Business Days to Approve` calculation, checked against an independent Python count |
 | Packaged and zipped | `.twbx` in `FirstName_MiddleInitial_LastName_Tableau.zip` |
 
+> **Note on "days to close":** the brief's Deliverables Summary says "average business days to *close*" for items (1) and (2), while the rest of the brief says "days to *approve*." Approval (Application → Last Approval) is the primary metric because it measures DDOT's own work. The "close" reading (Application → Issue, which adds the applicant's fee-payment time) is also covered: the **KPI - Overall** sheet shows the average business days to issue (**44.7**), and the **Approval vs Issuance** sheet compares both metrics for each permit category.
+
 ## 3. Data source
 
 - **Feed:** DDOT TOPS, *Public Space Construction Permits – Status* (MapServer layer 23)
@@ -96,7 +98,7 @@ python3 scripts/02_prepare_permits.py data/raw/permits_raw.json data
    - Average business days to approve = **22.2** (n = **2,987** with an approval date)
 5. Save as a packaged workbook (`.twbx`) and zip it with the required name, `Fulton_Q_Shannon_Tableau.zip`. The guide's §7.3 lists the files.
 
-> Note: the feed is live. Re-pulling the data later will change the counts slightly as permits are updated.
+> Note: the feed is live and drops some permits over time, so a new pull will not match these counts (see §8). To reproduce the published numbers, skip step 1 and unzip the committed 2026-10-13 snapshot instead: `gunzip -k data/raw/permits_raw.json.gz`.
 
 ## 7. Data dictionary (`permits_by_tracking_number.csv`)
 
@@ -128,3 +130,4 @@ The feed has no official data dictionary. These fields are derived or renamed by
 - `LastApprovalDate` is overwritten when a permit is reapproved, so separate review cycles can't be measured.
 - Applicant type and permit category come from keyword rules. They are documented in the script and can be adjusted.
 - The results are descriptive segments, not causal estimates (per the brief).
+- The analysis is a fixed snapshot of the 2026-10-13 pull. The live feed later drops some permits: a re-pull on 2026-10-29 was missing 460 of the 2,992 in-scope permits (94% of all dropped permits had status "Permit Expired", mostly applied for in June–July 2026). Because the loss falls mostly on quick approvals, re-pulling would bias the averages upward (22.2 → 24.2), so the snapshot is kept. Segment rankings were unchanged in the re-pull.
