@@ -93,7 +93,7 @@ python3 scripts/02_prepare_permits.py data/raw/permits_raw.json data
 4. Validate the workbook. The KPI sheet shows all three checks:
    - Permits in scope = **2,992**
    - QA mismatches = **0**
-   - Average business days to approve = **22.2**
+   - Average business days to approve = **22.2** (n = **2,987** with an approval date)
 5. Save as a packaged workbook (`.twbx`) and zip it with the required name, `Fulton_Q_Shannon_Tableau.zip`. The guide's §7.3 lists the files.
 
 > Note: the feed is live. Re-pulling the data later will change the counts slightly as permits are updated.
