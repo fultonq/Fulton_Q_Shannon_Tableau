@@ -1,7 +1,4 @@
 interview_prep/
 data/raw/*.json
-*.pdf
-*.zip
 __pycache__/
 *.pyc
-backups/
