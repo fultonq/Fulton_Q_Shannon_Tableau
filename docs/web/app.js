@@ -1,6 +1,6 @@
 /* FY26 Public Space Construction Permit dashboards for tableau_notes.html.
 
-   Generates the data views (Dashboard, Where Times Differ, Deeper Dive, Worksheets): their tabs, panels,
+   Generates the data views (Dashboard, Where Times Differ, Data Segmentation, Worksheets): their tabs, panels,
    filter bar, worksheets and charts. The permits come from the <script id="permit-data"> JSON that
    build_html.py embeds; every chart is computed here, so filters and click-to-filter need no server.
 
@@ -394,9 +394,9 @@
   </div>
 </div>` },
 
-    deeper: { label: 'Deeper Dive', html: () => `
+    deeper: { label: 'Data Segmentation', html: () => `
 <div class="dash">
-  <h1>Deeper dive: what separates fast and slow approvals</h1>
+  <h1>Data segmentation: what separates fast and slow approvals</h1>
   <p class="lede">Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?</p>
   <div class="grid g2">${card('axr')}${card('avi')}${card('ward')}${card('trend')}</div>
 </div>` },
@@ -409,7 +409,7 @@
   <div class="table-wrap"><table class="req-table"><thead><tr><th>Requirement</th><th>Worksheets</th></tr></thead><tbody>
   ${REQS.map(([, label, ids]) => `<tr><td>${esc(label)}</td><td>${ids.length
     ? ids.map(id => `<a href="#sheets-${id}">${esc(SHEETS[id].title)}</a>`).join(', ')
-    : '<a href="#dashboard">FY26 Permit Approval Times</a>, <a href="#segments">Where Times Differ</a>, <a href="#deeper">Deeper Dive</a>'
+    : '<a href="#dashboard">FY26 Permit Approval Times</a>, <a href="#segments">Where Times Differ</a>, <a href="#deeper">Data Segmentation</a>'
   }</td></tr>`).join('')}
   </tbody></table></div>
   ${REQS.filter(r => r[2].length).map(([, label, ids]) => `<section class="sheet-group"><h2>${esc(label)}</h2>` +

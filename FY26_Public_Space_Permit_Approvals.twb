@@ -1571,7 +1571,7 @@
             <zone h="4000" id="13" type-v2="text" w="100000" x="0" y="50000">
               <formatted-text>
                 <run bold="true" fontsize="12" fontcolor="#1f3864">3 | Where approval times differ</run>
-                <run fontsize="9" fontcolor="#595959">   Resubmission and project size separate fast from slow; geography does not (see Deeper Dive tab)</run>
+                <run fontsize="9" fontcolor="#595959">   Resubmission and project size separate fast from slow; geography does not (see Data Segmentation tab)</run>
               </formatted-text>
               <zone-style>
                 <format attr="background-color" value="#dce6f2" />
@@ -1637,7 +1637,7 @@
         </zone>
       </zones>
     </dashboard>
-    <dashboard name="Deeper Dive">
+    <dashboard name="Data Segmentation">
       <style />
       <size maxheight="1000" maxwidth="1400" minheight="1000" minwidth="1400" sizing-mode="fixed" />
       <zones>
@@ -1645,19 +1645,45 @@
           <zone h="100000" id="2" param="vert" type-v2="layout-flow" w="100000" x="0" y="0">
             <zone h="8000" id="3" type-v2="text" w="100000" x="0" y="0">
               <formatted-text>
-                <run bold="true" fontsize="20" fontcolor="#1f3864">Deeper dive: what separates fast and slow approvals</run>
+                <run bold="true" fontsize="20" fontcolor="#1f3864">Data segmentation: what separates fast and slow approvals</run>
                 <run>Æ
 </run>
                 <run fontsize="10" fontcolor="#404040">Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?</run>
               </formatted-text>
             </zone>
-            <zone h="46000" id="4" param="horz" type-v2="layout-flow" w="100000" x="0" y="8000">
-              <zone h="46000" id="5" name="Applicant x Resubmission" w="50000" x="0" y="8000" />
-              <zone h="46000" id="6" name="Approval vs Issuance" w="50000" x="50000" y="8000" />
+            <zone h="36000" id="4" param="horz" type-v2="layout-flow" w="100000" x="0" y="8000">
+              <zone h="36000" id="5" name="Applicant x Resubmission" w="50000" x="0" y="8000" />
+              <zone h="36000" id="6" name="Approval vs Issuance" w="50000" x="50000" y="8000" />
             </zone>
-            <zone h="46000" id="7" param="horz" type-v2="layout-flow" w="100000" x="0" y="54000">
-              <zone h="46000" id="8" name="By Ward" w="50000" x="0" y="54000" />
-              <zone h="46000" id="9" name="Monthly Trend (censored)" w="50000" x="50000" y="54000" />
+            <zone h="36000" id="7" param="horz" type-v2="layout-flow" w="100000" x="0" y="44000">
+              <zone h="36000" id="8" name="By Ward" w="50000" x="0" y="44000" />
+              <zone h="36000" id="9" name="Monthly Trend (censored)" w="50000" x="50000" y="44000" />
+            </zone>
+            <zone h="20000" id="10" type-v2="text" w="100000" x="0" y="80000">
+              <formatted-text>
+                <run bold="true" fontsize="12" fontcolor="#1f3864">Key takeaways</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- Resubmission gap holds for every applicant type: Washington Gas 5.5 vs 33.6 days, DC Water 19.6 vs 54.9, Private 20.3 vs 55.2. It is not an applicant-mix effect.</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- Most permits issue 3-5 business days after approval. Excavation - Gas is the exception: 8.0 days to approve but 55.3 to issue, and it holds 87% of all post-approval days.</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- The gas issuance wait is skewed (median 6 days, but 36% wait 20+), so it points to a payment or pickup step on a subset of permits, not to DDOT review.</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- Geography explains little: Wards 1-8 average 18.2 to 27.2 days with medians of 9 to 17. Only the 18 multi-ward permits stand out (36.8).</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- The monthly drop is not an improvement: Oct-May applications average 37.6 days vs 12.4 for Jun-Sep, because slow late-year permits were not yet issued by 9/30.</run>
+                <run>Æ
+</run>
+                <run fontsize="10" fontcolor="#404040">- Where to act: Revise &amp; Resubmit requests and the gas approval-to-issuance gap, not ward-level or seasonal factors.</run>
+              </formatted-text>
+              <zone-style>
+                <format attr="background-color" value="#f2f2f2" />
+              </zone-style>
             </zone>
           </zone>
         </zone>
@@ -1896,7 +1922,7 @@
       </viewpoints>
       <active id="-1" />
     </window>
-    <window class="dashboard" maximized="false" name="Deeper Dive">
+    <window class="dashboard" maximized="false" name="Data Segmentation">
       <viewpoints>
         <viewpoint name="Applicant x Resubmission" />
         <viewpoint name="Approval vs Issuance" />

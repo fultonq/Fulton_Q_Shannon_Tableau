@@ -1,6 +1,6 @@
 """Build tableau_notes.html: a single-file, single-page app with the FY26 permit dashboards and the prep notes.
 
-The data views (Dashboard, Where Times Differ, Deeper Dive, Worksheets) mirror the dashboards and worksheets
+The data views (Dashboard, Where Times Differ, Data Segmentation, Worksheets) mirror the dashboards and worksheets
 in FY26_Public_Space_Permit_Approvals.twbx. This script embeds the in-scope permits as compact JSON; app.js
 (which must sit next to the page) generates those views' tabs, layouts, filters and charts in the browser.
 

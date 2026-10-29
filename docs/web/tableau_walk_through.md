@@ -31,7 +31,7 @@ All figures come from the TOPS feed as pulled on 2026-10-13. Every number in thi
 | **Deliverable** | Packaged Tableau workbook with at least 3 sheets and 1 dashboard, plus a narrative |
 
 **What I delivered:**
-- A `.twbx` with 10 worksheets and 2 dashboards (main and "Deeper Dive")
+- A `.twbx` with 10 worksheets and 2 dashboards (main and "Data Segmentation")
 - `REPORT_SUMMARY.md`, the findings report
 - `README.md`
 - A build guide
@@ -265,7 +265,7 @@ They were issued with no approval date recorded, so the metric can't be computed
 1. **Main dashboard, top-left KPI:** 22.2 average and 13 median. Point out the QA = 0 check.
 2. **Category chart:** the range inside Excavation (Sewer 0.9 → Water 35.7) is why I split it.
 3. **Section 3 (applicant / resubmission / size):** the story of what separates fast from slow.
-4. **Deeper Dive dashboard:** the cross-tab showing the resubmission gap in every applicant row, then the Monthly Trend chart to explain the censoring warning.
+4. **Data Segmentation dashboard:** the cross-tab showing the resubmission gap in every applicant row, then the Monthly Trend chart to explain the censoring warning.
 5. **Click a category** (filter action) to show how the segments change. For example, filter to Water to show the effect of block count.
 
 ## Part 8 — Terms to use correctly

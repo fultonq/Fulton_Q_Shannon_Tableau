@@ -438,7 +438,7 @@ The reference line sits at **22.2**.
      - ⑥ a Text object: **"2 | By permit type category"**, followed in 9pt grey by *"Click a bar to filter the dashboard; line = overall average; Excavation is split by utility because it is 90% of permits"*. Same background.
      - ⑦ the **By Permit Category** sheet
    - Drag the divider so the left column is about one-third of the width.
-4. **⑧ Section header:** below row 2, add a Text object: **"3 | Where approval times differ"**, then in 9pt grey: *"Resubmission and project size separate fast from slow; geography does not (see Deeper Dive tab)"*. Background **#DCE6F2**.
+4. **⑧ Section header:** below row 2, add a Text object: **"3 | Where approval times differ"**, then in 9pt grey: *"Resubmission and project size separate fast from slow; geography does not (see Data Segmentation tab)"*. Background **#DCE6F2**.
 5. **Row 3:** add a **Horizontal** container with ⑨ **By Applicant Type**, ⑩ **Resubmission Impact** and ⑪ **Work Location Size**. Select the container → **Distribute Contents Evenly**.
 6. **Row 4:** add a **Horizontal** container with two Text objects, both with background **#F2F2F2**.
    - **⑫ Key takeaways** (heading 12pt bold navy, body 10pt):
@@ -468,17 +468,24 @@ The reference line sits at **22.2**.
 - The reference lines stay at **22.2**, because they're FIXED, so each filtered group is still compared with the all-permit average.
 - Click the bar again to clear the filter.
 
-### 6.2 Dashboard 2 — `Deeper Dive`
+### 6.2 Dashboard 2 — `Data Segmentation`
 
-1. Create a new dashboard named **Deeper Dive**, sized **1400 × 1000**, with a **Vertical** container.
+1. Create a new dashboard named **Data Segmentation**, sized **1400 × 1000**, with a **Vertical** container.
 2. Title Text, 20pt bold navy:
-   > Deeper dive: what separates fast and slow approvals
+   > Data segmentation: what separates fast and slow approvals
 
    Add a second line in 10pt grey:
    > Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?
 3. Add a **Horizontal** container with **Applicant x Resubmission** and **Approval vs Issuance**.
 4. Add another **Horizontal** container with **By Ward** and **Monthly Trend (censored)**.
 5. Distribute the contents of each row evenly.
+6. Below the two rows, add a Text object for **Key takeaways** (12pt bold navy heading, 10pt grey bullets, background **#F2F2F2**), sized to about 20% of the height:
+   - Resubmission gap holds for every applicant type: Washington Gas 5.5 vs 33.6 days, DC Water 19.6 vs 54.9, Private 20.3 vs 55.2. It is not an applicant-mix effect.
+   - Most permits issue 3-5 business days after approval. Excavation - Gas is the exception: 8.0 days to approve but 55.3 to issue, and it holds 87% of all post-approval days.
+   - The gas issuance wait is skewed (median 6 days, but 36% wait 20+), so it points to a payment or pickup step on a subset of permits, not to DDOT review.
+   - Geography explains little: Wards 1-8 average 18.2 to 27.2 days with medians of 9 to 17. Only the 18 multi-ward permits stand out (36.8).
+   - The monthly drop is not an improvement: Oct-May applications average 37.6 days vs 12.4 for Jun-Sep, because slow late-year permits were not yet issued by 9/30.
+   - Where to act: Revise & Resubmit requests and the gas approval-to-issuance gap, not ward-level or seasonal factors.
 
 ---
 

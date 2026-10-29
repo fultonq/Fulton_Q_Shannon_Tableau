@@ -18,7 +18,7 @@ How many business days, on average, it takes to approve new construction permits
 An Associate Director, so an executive audience. I led with one headline number, kept segments intuitive (applicant type is the required third sheet because it reads naturally), showed the median next to every average, and worded every finding as *where* times differ, not *why*.
 
 ### Q: What did you deliver?
-A `.twbx` with 10 worksheets and 2 dashboards (main and "Deeper Dive"), a findings report (`REPORT_SUMMARY.md`), a README, a Tableau build guide, and 2 Python scripts for the data pull and data prep.
+A `.twbx` with 10 worksheets and 2 dashboards (main and "Data Segmentation"), a findings report (`REPORT_SUMMARY.md`), a README, a Tableau build guide, and 2 Python scripts for the data pull and data prep.
 
 ### Q: Walk me through your approach.
 Four steps: **acquire → understand grain → define the metric → segment**. Lead with the grain finding: I checked what one row represented before calculating anything, and that kept the headline from being nearly doubled.
@@ -142,7 +142,7 @@ Criteria: a big gap (≥10 days or ≥2×), enough permits (n ≥ 20, or flagged
 Resubmission: 12.4 days (n=2,171) vs. 48.3 (n=816). Resubmitted permits are 27% of permits but 59% of approval days, and the gap holds within every applicant type.
 
 ### Q: Isn't applicant type the real story? Private applicants are much slower.
-Partly a proxy. Private applicants are asked to resubmit 68% of the time vs. 12% for Washington Gas. Within each applicant type, resubmission still adds 15 to 35 days. The cross-tab sheet on the Deeper Dive dashboard shows this.
+Partly a proxy. Private applicants are asked to resubmit 68% of the time vs. 12% for Washington Gas. Within each applicant type, resubmission still adds 15 to 35 days. The cross-tab sheet on the Data Segmentation dashboard shows this.
 
 ### Q: What does project size tell you?
 1 block: 13.5 days; 2–5: 38.3; 6–20: 51.7; 21+: 45.7. DC Water single-block permits take about 7 days, its multi-block permits 41–52. So DC Water isn't slow as an applicant; its multi-block lateral-repair work is. *Unconfirmed hypothesis:* a programmatic effort such as lead service line replacement, which could justify a program-level review approach.

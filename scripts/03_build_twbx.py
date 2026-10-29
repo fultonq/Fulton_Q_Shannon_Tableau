@@ -493,7 +493,7 @@ def build():
         Z.zone(right, 32000, y + 4000, 68000, 36000, name="By Permit Category")
         y += 40000
         Z.text(v, 0, y, 100000, 4000, [("3 | Where approval times differ", h2),
-                                       ("   Resubmission and project size separate fast from slow; geography does not (see Deeper Dive tab)", small)],
+                                       ("   Resubmission and project size separate fast from slow; geography does not (see Data Segmentation tab)", small)],
                bg=sec_bg)
         y += 4000
         row = Z.zone(v, 0, y, 100000, 31000, param="horz", **{"type-v2": "layout-flow"})
@@ -521,18 +521,27 @@ def build():
         ], bg="#f2f2f2")
 
     def deep_dash(Z, root):
-        """Lay out the Deeper Dive dashboard as a 2x2 grid of cross-check sheets."""
+        """Lay out the Data Segmentation dashboard as a 2x2 grid of cross-check sheets above a key takeaways box."""
         v = Z.zone(root, 0, 0, 100000, 100000, param="vert", **{"type-v2": "layout-flow"})
-        Z.text(v, 0, 0, 100000, 8000, [("Deeper dive: what separates fast and slow approvals", h1), (NL, None),
+        Z.text(v, 0, 0, 100000, 8000, [("Data segmentation: what separates fast and slow approvals", h1), (NL, None),
                                        ("Cross-checks behind the main dashboard: is the gap real within each group, and where does time go after approval?", body)])
-        row = Z.zone(v, 0, 8000, 100000, 46000, param="horz", **{"type-v2": "layout-flow"})
-        Z.zone(row, 0, 8000, 50000, 46000, name="Applicant x Resubmission")
-        Z.zone(row, 50000, 8000, 50000, 46000, name="Approval vs Issuance")
-        row = Z.zone(v, 0, 54000, 100000, 46000, param="horz", **{"type-v2": "layout-flow"})
-        Z.zone(row, 0, 54000, 50000, 46000, name="By Ward")
-        Z.zone(row, 50000, 54000, 50000, 46000, name="Monthly Trend (censored)")
+        row = Z.zone(v, 0, 8000, 100000, 36000, param="horz", **{"type-v2": "layout-flow"})
+        Z.zone(row, 0, 8000, 50000, 36000, name="Applicant x Resubmission")
+        Z.zone(row, 50000, 8000, 50000, 36000, name="Approval vs Issuance")
+        row = Z.zone(v, 0, 44000, 100000, 36000, param="horz", **{"type-v2": "layout-flow"})
+        Z.zone(row, 0, 44000, 50000, 36000, name="By Ward")
+        Z.zone(row, 50000, 44000, 50000, 36000, name="Monthly Trend (censored)")
+        Z.text(v, 0, 80000, 100000, 20000, [
+            ("Key takeaways", h2), (NL, None),
+            ("- Resubmission gap holds for every applicant type: Washington Gas 5.5 vs 33.6 days, DC Water 19.6 vs 54.9, Private 20.3 vs 55.2. It is not an applicant-mix effect.", body), (NL, None),
+            ("- Most permits issue 3-5 business days after approval. Excavation - Gas is the exception: 8.0 days to approve but 55.3 to issue, and it holds 87% of all post-approval days.", body), (NL, None),
+            ("- The gas issuance wait is skewed (median 6 days, but 36% wait 20+), so it points to a payment or pickup step on a subset of permits, not to DDOT review.", body), (NL, None),
+            ("- Geography explains little: Wards 1-8 average 18.2 to 27.2 days with medians of 9 to 17. Only the 18 multi-ward permits stand out (36.8).", body), (NL, None),
+            ("- The monthly drop is not an improvement: Oct-May applications average 37.6 days vs 12.4 for Jun-Sep, because slow late-year permits were not yet issued by 9/30.", body), (NL, None),
+            ("- Where to act: Revise & Resubmit requests and the gas approval-to-issuance gap, not ward-level or seasonal factors.", body),
+        ], bg="#f2f2f2")
 
-    D1, D2 = "FY26 Permit Approval Times", "Deeper Dive"
+    D1, D2 = "FY26 Permit Approval Times", "Data Segmentation"
     dashboard(D1, main_dash)
     dashboard(D2, deep_dash)
 
