@@ -1,5 +1,5 @@
 interview_prep/
-data/raw/
+data/raw/*.json
 *.pdf
 *.zip
 __pycache__/
