@@ -1,4 +1,7 @@
-interview_prep/
-data/raw/*.json
+# local Python virtual environment
+.venv/
 __pycache__/
 *.pyc
+# kept from the previous .gitignore
+interview_prep/
+data/raw/*.json
